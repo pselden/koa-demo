@@ -1,0 +1,26 @@
+{
+  "name": "koa-demo",
+  "version": "0.0.1",
+  "description": "Demo for a simple koa app.",
+  "main": "app.js",
+  "dependencies": {
+    "co": "~3.0.1",
+    "koa": "~0.2.0",
+    "pg": "~2.10.0",
+    "sequelize": "~2.0.0-beta.5",
+    "thunkify": "0.0.1",
+    "koa-router": "~2.2.0",
+    "co-body": "0.0.1",
+    "koa-logger": "~1.1.0",
+    "koa-response-time": "~1.0.1",
+    "koa-favicon": "~1.0.1",
+    "koa-mount": "~1.2.2",
+    "koa-compress": "~1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pselden",
+  "license": "MIT"
+}
