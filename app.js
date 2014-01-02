@@ -8,7 +8,7 @@ app.use(middleware.logger());
 app.use(middleware.responseTime());
 app.use(middleware.compress());
 
-app.use(router.middleware());
+app.use(middleware.mount('/v1', router.middleware()));
 
 db
     .sequelize.sync()
@@ -16,8 +16,7 @@ db
         if (err) {
             throw err;
         } else {
-
             app.listen(3000);
-
+            console.log('listening on port 3000')
         }
     });
