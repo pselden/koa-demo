@@ -4,7 +4,7 @@ var platform = require('../platform'),
 exports.show = function *(){
     var user = yield platform.users.getUser(this.params.userId);
     if(!user){
-        return this.error(404, 'No user found');
+        return this.throw(404, 'No user found');
     }
 
     this.body = user;
