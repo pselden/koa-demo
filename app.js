@@ -12,7 +12,7 @@ app.use(middleware.compress());
 app.use(middleware.mount('/v1', router.middleware()));
 
 co(function *(){
-    var connection = yield db.sequelize.sync();
+    var connection = yield db.sequelize.client.sync();
     if(connection){
         app.listen(3000);
         console.log('connected to database and listening on port 3000');

@@ -8,6 +8,7 @@ Prerequisites
 
 - node.js version with harmony generators support (v0.11.9 is tested).
 - PostgreSQL running on port 5432 with no username/password -- database is named "blogs_db"
+- Redis (used for cache) running on port 6379
 
 Usage
 =======
