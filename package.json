@@ -15,7 +15,9 @@
     "koa-response-time": "~1.0.1",
     "koa-favicon": "~1.0.1",
     "koa-mount": "~1.2.2",
-    "koa-compress": "~1.0.0"
+    "koa-compress": "~1.0.0",
+    "redis": "~0.10.0",
+    "co-redis": "0.0.2"
   },
   "devDependencies": {},
   "scripts": {
