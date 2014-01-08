@@ -1,15 +1,15 @@
 var app = require('koa')();
 var middleware = require('./lib/middleware');
 var db = require('./platform/db');
-var router = require('./lib/router');
+var services = require('./services');
 var co = require('co');
 
-app.use(middleware.favicon()); // TODO - right now this actually bounces a favicon with a 404
+app.use(middleware.favicon());
 app.use(middleware.logger());
 app.use(middleware.responseTime());
 app.use(middleware.compress());
 
-app.use(middleware.mount('/v1', router.middleware()));
+app.use(middleware.mount('/v1', services.v1));
 
 co(function *(){
     var connection = yield db.sequelize.client.sync();

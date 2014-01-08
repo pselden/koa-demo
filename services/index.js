@@ -1,2 +1,1 @@
-exports.users = require('./users');
-exports.posts = require('./posts');
+exports.v1 = require('./v1');
